@@ -45,3 +45,110 @@ html, body{
     right: 26px;
     top: 30px;
 }
+
+.navegation-nav {
+    display: inline-block;
+    position: fixed;
+    top: 90px;
+    left: 253px;
+    width: 1257px;
+    height: 55px;
+    background-color: #373867;
+    z-index: 1;
+}
+
+.navegation-nav-list li button {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    width: 212px;
+    height: 50px;
+    background-color: #373867;
+    margin: -3px;
+}
+
+.navegation-nav-list li button > a {
+    color: #46A07B;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navigation-iten {
+    display: inline-block;
+}
+
+.button-nav {
+    border-top: none;
+}
+
+aside {
+    position: fixed;
+    top: 87px;
+    left: 0;
+    width: 253px;
+    height: 950px;
+    background-color: rgb(230, 230, 230);
+    z-index: 999;
+    text-align: center;
+    border: 1px solid black;
+}
+
+aside .trackgenix-search {
+    display: inline;
+    position: relative;
+    top: 8px;
+    width: 235px;
+    height: 40px;
+}
+
+aside form svg {
+    position: relative;
+    bottom: 17px;
+    left: 100px;
+}
+
+.aside-menu-paragraph {
+    display: block;
+    position: relative;
+    top: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'OpenSans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #373867;
+}
+
+.aside-nav-item {
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 1px;
+    padding: 25px 20px;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'OpenSans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin: 0px 30px;
+    color: #479679;
+}
+
+.nav-item-border {
+    border-bottom: 1px solid black;
+    width: 190px;
+    text-align: center;
+}
+
+.aside-logo-image {
+    display: block;
+    position: relative;
+    top: 250px;
+    left: 95px;
+}
+
+.aside-logo-paragraph {
+    display: block;
+    position: relative;
+    top: 270px;
+    font-size: 12px;
+}
