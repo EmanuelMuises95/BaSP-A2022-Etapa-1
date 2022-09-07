@@ -758,3 +758,123 @@ input:checked+.slider:before {
     width: 1050px;
     text-align: center;
 }
+
+.about-us-section {
+    display: block;
+    width: 1259px;
+    height: 488px;
+    position: relative;
+    top: 141px;
+    left: 254px;
+    border-bottom: 1px solid black;
+}
+
+.about-us-title {
+    display: inline-block;
+    position: relative;
+    float: left;
+    top: 50px;
+    left: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #373867;
+}
+
+.about-us-first-paragraph {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 550px;
+    top: 115px;
+    right: 35px;
+    color: #373867;
+}
+
+.about-us-second-paragraph {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 590px;
+    top: 198px;
+    right: 585px;
+}
+
+.about-us-image {
+    display: inline-block;
+    position: relative;
+    float: right;
+    right: 35px;
+    width: 420px;
+}
+
+.our-products-section {
+    display: block;
+    width: 1090px;
+    height: 1430px;
+    position: relative;
+    top: 141px;
+    left: 355px;
+    border-bottom: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.our-products-title {
+    display: inline-block;
+    position: relative;
+    bottom: 375px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container-titles-our-product {
+    font-size: 23px;
+    width: 310px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.container-paragraphs-our-product {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    width: 360px;
+    padding: 25px 0px;
+}
+
+.list-our-product-section li {
+    margin-left: 50px;
+}
+
+.list-our-product-section {
+    list-style-type: disc;
+}
+
+.time-control-article {
+    display: inline-block;
+    position: relative;
+    top: 225px;
+    right: 150px;
+}
+
+.customized-working-article {
+    display: inline-block;
+    position: relative;
+    top: 230px;
+    left: 100px;
+}
+
+.intuitive-control-article {
+    display: inline-block;
+    position: relative;
+    top: 275px;
+    left: 40px;
+}
+
+.project-management-article {
+    display: inline-block;
+    position: relative;
+    top: 220px;
+    left: 300px;
+}
