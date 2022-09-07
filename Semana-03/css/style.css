@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'OpenSans', 'Helvetica Neue', sans-serif;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+#top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1512px;
+    height: 91px;
+    background-color: #373867;
+    z-index: 999;
+}
+
+.header-logo {
+    position: relative;
+    float: left;
+    top: 10px;
+    left: 20px;
+}
+
+#header-principal-title {
+    position: fixed;
+    top: 32px;
+    left: 570px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'OpenSans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 60px;
+    color: #46A07B;
+}
+
+.header-burger-icon {
+    position: relative;
+    float: right;
+    right: 26px;
+    top: 30px;
+}

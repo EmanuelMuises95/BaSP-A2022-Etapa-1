@@ -26,6 +26,7 @@
 
         1 - HTML
         2 - GIT
+        3 - CSS
 
 ## Week 01
 
@@ -36,5 +37,12 @@
 - In this week, we create the basic structure of the html file for the landing page, with correct syntax and semantic tags. 
   
   We don't use styles, because the idea of ​​this problem, was to understand the correct layout of the file
+
+_Emanuel Muises_
+
+## Week 03 
+
+- In this week, We start to model the html file of the second week, applying css, to be able to accommodate the elements 
+  and creating the necessary view
 
 _Emanuel Muises_
