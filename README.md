@@ -34,7 +34,7 @@
         1 - HTML
         2 - GIT
         3 - CSS
-	4 - GitHub Pages
+	      4 - GitHub Pages
 
 ## Week 01
 
