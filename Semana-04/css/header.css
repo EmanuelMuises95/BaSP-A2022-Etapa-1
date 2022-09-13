@@ -1,0 +1,73 @@
+.top-nav {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 91px;
+    background-color: #373867;
+    color: #46A07B;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'OpenSans', 'Helvetica Neue', sans-serif;
+    z-index: 999;
+}
+
+.top-nav:nth-child(1) {
+    padding: .5rem;
+}
+
+.top-nav > h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.navegation-nav {
+    display: none;
+    position: fixed;
+    top: 91px;
+    width: max(70%, (100% - 320px) );
+    height: 56px;
+    margin-left: min(30%, 320px);
+    background-color: #373867;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'OpenSans', 'Helvetica Neue', sans-serif;
+    z-index: 1;
+}
+
+.navegation-nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.navegation-nav a {
+    font-size: 0.9rem;
+    color: #479679;
+    text-decoration: none;
+}
+
+.navegation-nav ul li {
+    width: 16.5%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.navegation-nav ul li button {
+    border: none;
+    background-color: #373867;
+}
+
+@media (min-width: 768px) {
+    .navegation-nav {
+        display: flex;
+    }
+    .hamburguer-menu {
+        visibility: hidden;
+    }
+}
