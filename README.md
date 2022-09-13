@@ -22,11 +22,19 @@
 
     5 - If you also want to make modifications, you can drag and drop the index.html file into a code editor
 
+    6 - You can use the following link to see the project, you can also use the element inspector to evaluate the 
+        responsive design of the site
+
+        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-04/
+
+    	Responsive Design -> Breakpoints: 390px, 768px & 1200px
+
 ## Technologies
 
         1 - HTML
         2 - GIT
         3 - CSS
+	4 - GitHub Pages
 
 ## Week 01
 
@@ -44,5 +52,14 @@ _Emanuel Muises_
 
 - In this week, We start to model the html file of the second week, applying css, to be able to accommodate the elements 
   and creating the necessary view
+
+_Emanuel Muises_
+
+## Week 04 
+
+- In this week, we start using flexbox, based on the fundamentals of responsive design, also using media queries.
+
+- You will also find in the first steps section, the link that will allow you to preview the project on github pages 
+  WITHOUT having to clone the repository locally
 
 _Emanuel Muises_
