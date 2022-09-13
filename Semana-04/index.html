@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/aside.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Source+Sans+Pro:wght@200;300
@@ -14,60 +18,42 @@
     </head>
     <body>
         <header>
-            <div id="top-nav">
-                <img src="assets/img/rocket-logo.png" alt="logo-radium" class="header-logo">
-                <h1 id="header-principal-title">TRACKGENIX</h1>
-                <svg class="header-burger-icon" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"
-                width="30px"
-                height="30px">
-                    <path d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 
-                        27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 
-                        3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z" />
-                </svg>
+            <div class="top-nav">
+                <img src="assets/img/rocket-logo.png" alt="logo-radium">
+                <h1>TRACKGENIX</h1>
+                <img src="assets/img/hamburguer-menu.png" alt="hamburguer-menu" class="hamburguer-menu">
             </div>
             <nav class="navegation-nav">
                 <ul class="navegation-nav-list">
-                    <li class="navigation-iten">
-                        <button class="button-nav">
-                            <a href="#">
-                                Features
-                            </a>
-                        </button>
+                    <li>
+                        <a href="#">
+                            Features
+                        </a>
                     </li>
-                    <li class="navigation-iten">
-                        <button class="button-nav button-fix">
-                            <a href="#">
-                                Why Should You Use Trackgenix
-                            </a>
-                        </button>
+                    <li>
+                        <a href="#">
+                            Why Should You Use Trackgenix
+                        </a>
                     </li>
-                    <li class="navigation-iten">
-                        <button class="button-nav">
-                            <a href="#">
-                                History
-                            </a>
-                        </button>
+                    <li>
+                        <a href="#">
+                            History
+                        </a>
                     </li>
-                    <li class="navigation-iten">
-                        <button class="button-nav">
-                            <a href="#">
-                                Products
-                            </a>
-                        </button>
+                    <li>
+                        <a href="#">
+                            Products
+                        </a>
                     </li>
-                    <li class="navigation-iten">
-                        <button class="button-nav">
-                            <a href="#">
-                                About Us
-                            </a>
-                        </button>
+                    <li>
+                        <a href="#">
+                            About Us
+                        </a>
                     </li>
-                    <li class="navigation-iten">
-                        <button class="button-nav">
-                            <a href="#">
-                                Support
-                            </a>
-                        </button>
+                    <li>
+                        <a href="#">
+                            Support
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -86,95 +72,102 @@
                         7.99368 0.601563Z" fill="#373867" />
                 </svg>
             </form>
-            <p class="aside-menu-paragraph">Menu</p>
-            <a href="#" class="aside-nav-item nav-item-border">Home</a>
-            <a href="#" class="aside-nav-item nav-item-border">SingUp</a>
-            <a href="#" class="aside-nav-item nav-item-border">Login</a>
-            <a href="#" class="aside-nav-item nav-item-border-none">Contact Information</a>
+            <p>Menu</p>
+            <div class="container-aside">
+                <a href="#" class="aside-nav-item nav-item-border">Home</a>
+                <a href="#" class="aside-nav-item nav-item-border">SingUp</a>
+                <a href="#" class="aside-nav-item nav-item-border">Login</a>
+                <a href="#" class="aside-nav-item nav-item-border-none">Contact Information</a>
+            </div>
             <img src="assets/img/rocket-logo.png" alt="logo-radium" class="aside-logo-image">
             <p class="aside-logo-paragraph">Developed by GigaTech Software Solutions S.A.</p>
         </aside>
         <main>
-            <section id="welcome-section">
-                <h2 class="welcome-section-title">WELCOME</h2>
-                <p class="welcome-section-paragraph">
-                    “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA.
-                    This system will allow them to efficiently manage their proyects, schedule flow,
-                    selected work teams and much more.
-                </p>
-                <img src="assets/img/landing-image.png" alt="imagen-welcome-title-image"
-                class="welcome-section-image">
+            <section class="welcome-section">
+                <h2>WELCOME</h2>
+                <div>
+                    <p>
+                        “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA.
+                        This system will allow them to efficiently manage their proyects, schedule flow,
+                        selected work teams and much more.
+                    </p>
+                    <img src="assets/img/landing-image.png" alt="imagen-welcome-title-image">
+                </div>
             </section>
             <section class="app-features-section">
-                <h2 class="app-features-section-title">Application Features</h2>
-                <article>
-                    <h3 class="hour-log-title">Hours Log</h3>
-                    <img src="assets/img/hours-log.png" alt="hours-log-image" class="hours-log-image">
-                </article>
-                <article>
-                    <h3 class="reports-title">Reports</h3>
-                    <img src="assets/img/reports.png" alt="reports-image" class="reports-image">
-                </article>
-                <article>
-                    <h3 class="resource-management-title">Resource Management</h3>
-                    <img src="assets/img/resource-management.png" alt="resource-management-image"
-                    class="resource-management-image">
-                </article>
-                <article>
-                    <h3 class="multiple-roles-title">Multiple Roles</h3>
-                    <img src="assets/img/multiple-roles.png" alt="multiple-roles-image" class="multiple-roles-image">
-                </article>
+                <h2>Application Features</h2>
+                <div>
+                    <article>
+                        <h3>Hours Log</h3>
+                        <img src="assets/img/hours-log.png" alt="hours-log-image">
+                    </article>
+                    <article>
+                        <h3>Reports</h3>
+                        <img src="assets/img/reports.png" alt="reports-image">
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <h3>Resource Management</h3>
+                        <img src="assets/img/resource-management.png" alt="resource-management-image">
+                    </article>
+                    <article>
+                        <h3>Multiple Roles</h3>
+                        <img src="assets/img/multiple-roles.png" alt="multiple-roles-image">
+                    </article>
+                </div>
             </section>
             <section class="reasons-section">
-                <h2 class="reason-title">Why you should use Trackgenix?</h2>
-                <article>
-                    <div class="container-rotate-p-booster">
-                        <img src="assets/img/productivity-booster.png" alt="productivity-booster-image"
-                        class="productivity-booster-image">
-                    </div>
-                    <h3 class="productivity-booster-title">Productivity Booster</h3>
-                    <p class="productivity-booster-paragraph">
-                        Be more productive using better Focus, Time Management,Organization and Efficiency
-                    </p>
-                </article>
-                <article>
-                    <div class="container-rotate-w-traceability">
-                        <img src="assets/img/work-traceability.png" alt="work-traceability-image"
-                        class="work-traceability-image">
-                    </div>
-                    
-                    <h3 class="work-traceability-title">Work traceability</h3>
-                    <p class="work-traceability-paragraph">
-                        Keep track of specs, changes, requests, results, and versions
-                    </p>
-                </article>
-                <article>
-                    <div class="container-rotate-l-management">
-                        <img src="assets/img/leadership-and-team-management.png"
-                        alt="leadership-and-team-management-image" class="leadership-and-team-management-image">
-                    </div>
-                    <h3 class="leadership-management-title">Leadership and team management</h3>
-                    <p class="leadership-management-paragraph">
-                        Lead a group of people in accomplishing a task or common goal. Effective team management
-                        involves
-                        supporting, communicating with and uplifting team members so they perform to the best of their
-                        abilities and continue to grow as professionals.
-                    </p>
-                </article>
-                <article>
-                    <div class="container-rotate-d-making">
-                        <img src="assets/img/decision-making.png" alt="decision-making-image"
-                        class="decision-making-image">
-                    </div>
-                    <h3 class="decision-making-title">Decision making</h3>
-                    <p class="decision-making-paragraph">
-                        Make better decisions for your business
-                    </p>
-                </article>
+                <h2>Why you should use Trackgenix?</h2>
+                <div>
+                    <article>
+                        <img src="assets/img/productivity-booster.png" alt="productivity-booster-image">
+                        <div>
+                            <h3>Productivity Booster</h3>
+                            <p>
+                                Be more productive using better Focus, Time Management,Organization and Efficiency
+                            </p>
+                        </div>    
+                    </article>
+                    <article>
+                        <img src="assets/img/work-traceability.png" alt="work-traceability-image">
+                        <div>
+                            <h3>Work traceability</h3>
+                            <p>
+                                Keep track of specs, changes, requests, results, and versions
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                            <img src="assets/img/leadership-and-team-management.png"
+                            alt="leadership-and-team-management-image">
+                        <div>
+                            <h3>Leadership and team management</h3>
+                            <p>
+                                Lead a group of people in accomplishing a task or common goal. Effective team management
+                                involves
+                                supporting, communicating with and uplifting team members so they perform to the best of
+                                their
+                                abilities and continue to grow as professionals.
+                            </p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="assets/img/decision-making.png" alt="decision-making-image">
+                        <div>
+                            <h3>Decision making</h3>
+                            <p>
+                                Make better decisions for your business
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </section>
             <section class="form-section">
                 <article>
-                    <h3 class="inscription-form-title">Inscription Form</h3>
+                    <h3>Inscription Form</h3>
                     <form>
                         <input type="text" id="first-name" name="first-name" placeholder="Name">
                         <input type="email" id="email" name="email" placeholder="Email">
@@ -184,22 +177,24 @@
                             <option value="systems">Systems</option>
                             <option value="merchandising">Merchandising</option>
                         </select>
-                        <div class="checkbox-email">
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                            </label>
-                            <label for="email-copy">Email me a copy</label>
-                        </div>
-                        <div class="checkbox-terms-of-service">
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                            </label>
-                            <label for="terms-of-service">I'm human, and I accept terms of service</label>
+                        <div class="container-switches">
+                            <div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <label for="email-copy">Email me a copy</label>
+                            </div>
+                            <div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                                <label for="terms-of-service">I'm human, and I accept terms of service</label>
+                            </div>
                         </div>
                         <label for="message" class="label-text-area">Text</label>
-                        <textarea name="message" id="message" rows="20" cols="180"
+                        <textarea name="message" class="message" rows="20" cols="180"
                             placeholder="Enter your text here..."></textarea>
                         <input type="submit" value="Submit" class="submit-button">
                     </form>
@@ -207,23 +202,26 @@
             </section>
             <section class="mission-section">
                 <article>
-                    <h3 class="mission-principal-title">Company's Mission</h3>
-                    <article>
-                        <h4 class="mission-secondary-title"><div class="green-underline">WHERE WE STARTED;</div><div
-                            class="blue-underline">WHERE WE ARE HEADED
-                        </div><h4>
-                        <img src="assets/img/rocket-logo.png" alt="logo-radium-company-mission" class="mission-logo">
+                    <h3>Company's Mission</h3>
+                    <div>
+                        <div>
+                            <h4>
+                                <div class="green-underline">WHERE WE STARTED;</div>
+                                <div class="blue-underline">WHERE WE ARE HEADED</div>
+                            </h4>
+                            <img src="assets/img/rocket-logo.png" alt="logo-radium-company-mission">
+                        </div>
                         <p class="mission-first-paragraph">
                             Make time your ally, make puntuality the difference
                         </p>
                         <p class="mission-secondary-paragraph">
                             Our mission is to allow workers all over the world to reach their full potential.
                         </p>
-                        <p class="mission-third-paragraph">
+                        <p class="mission-secondary-paragraph">
                             Our goal is to bring more power to start-ups through top-notch and user-friendly
                             time-tracking web apps, easily accessible through any device.
                         </p>
-                        <p class="mission-fourth-paragraph">
+                        <p class="mission-secondary-paragraph">
                             We believe in integrity, honesty, passion for our client's ideas and communication.
                         </p>
                         <h4 class="mission-third-title">HEAR WHAT THEY SAY ABOUT US</h4>
@@ -234,162 +232,188 @@
                         <p class="quote-customer-paragraph">
                             -Satisfied Customer
                         </p>
-                    </article>
+                    </div>
                 </article>
             </section>
             <section class="about-us-section">
-                <article>
-                    <h3 class="about-us-title">About Us</h3>
-                    <p class="about-us-first-paragraph">
+                <h3>About Us</h3>
+                <article class="container">
+                    <p>
                         Radium Rocket developed TrackGenix as a software solution for optimal time-tracking and project
-                        management as a request for one of its most trusted clients, GigaTech Software Solutions,
-                        in late 2021, and swiftly became one of the most requested services in all of the million-dollar
-                        South American productivity industry.
+                        management as a request for one of its most trusted clients, GigaTech Software Solutions, in
+                        late 2021, and swiftly became one of the most requested services in all of the million-dollar
+                        South American productivity industry. RadiumRocket are a group of passionate people fond of the
+                        latest cutting edge technologies in software development. They position ourselves at your side
+                        through all the process of development being responsible and co-workers with you to
+                        successfully get your product moving.
                     </p>
-                    <p class="about-us-second-paragraph"> 
-                        RadiumRocket are a group of passionate people fond of the latest cutting edge technologies in
-                        software development. They position ourselves at your side through all the process of
-                        development
-                        being responsible and co-workers with you to successfully get your product moving.
-                    </p>
-                    <img src="assets/img/security.png" alt="security-image" class="about-us-image">
+                    <img src="assets/img/security.png" alt="security-image">
                 </article>
             </section>
             <section class="our-products-section">
                 <article>
-                    <h3 class="our-products-title">Our Products</h3>
-                    <article class="time-control-article">
-                        <img src="assets/img/employee-time-control-from-any-place-and-device.png"
-                        alt="employee-time-image">
-                        <h4 class="container-titles-our-product">Employee time control from any place and devide</h4>
-                        <p class="container-paragraphs-our-product">A single app for recording the day for any
-                            situation:</p>
-                        <ul class="list-our-product-section">
-                            <li>Web</li>
-                            <li>Mobile App</li>
-                            <li>Kiosk with tablet</li>
-                            <li>Biometric recognition devices</li>
-                        </ul>
-                    </article>
-                    <article class="customized-working-article">
-                        <img src="assets/img/customized-working-day-registration-policies.png"
-                            alt="customized-working-day-image">
-                        <h4 class="container-titles-our-product">Customized working day registration policies</h4>
-                        <p class="container-paragraphs-our-product">
-                            Customize the mandatory registration of the working day with a completely flexible app to
-                            clock
-                            in
-                            at work. Apply more restrictive measures:
-                        </p>
-                        <ul class="list-our-product-section">
-                            <li>Expected transfer in one click</li>
-                            <li>Weekly massive transfer</li>
-                            <li>Flexible entry and exit</li>
-                        </ul>
-                    </article>
-                    <article class="intuitive-control-article">
-                        <img src="assets/img/the-most-intuitive-time-control-app.png"
-                            alt="intuitive-time-control-app-image">
-                        <h4 class="container-titles-our-product">The most intuitive time control app</h4>
-                        <p class="container-paragraphs-our-product">
-                            Registration of the day from anywhere to promote teleworking and self-management of time.
-                        </p>
-                        <ul class="list-our-product-section">
-                            <li>24 hours access from anywhere</li>
-                            <li>Geolocated transfer detection system</li>
-                            <li>Instant notifications and alerts</li>
-                        </ul>
-                    </article>
-                    <article class="project-management-article">
-                        <img src="assets/img/project-management-done-well.png" alt="project-management-image">
-                        <h4 class="container-titles-our-product">Project Management Done Well</h4>
-                        <p class="container-paragraphs-our-product">
-                            Advanced controls and features to effortlessly control all your projects
-                        </p>
-                        <ul class="list-our-product-section">
-                            <li>Browse between different projects</li>
-                            <li>Equiped with graphs and tables</li>
-                        </ul>
-                    </article>
+                    <h3>Our Products</h3>
+                    <div>
+                        <article>
+                            <img src="assets/img/employee-time-control-from-any-place-and-device.png"
+                            alt="employee-time-image">
+                            <h4>Employee time control from any place and devide</h4>
+                            <p>A single app for recording the day for any
+                                situation:</p>
+                            <ul>
+                                <li>Web</li>
+                                <li>Mobile App</li>
+                                <li>Kiosk with tablet</li>
+                                <li>Biometric recognition devices</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <img src="assets/img/customized-working-day-registration-policies.png"
+                                alt="customized-working-day-image">
+                            <h4>Customized working day registration policies</h4>
+                            <p>
+                                Customize the mandatory registration of the working day with a completely flexible app
+                                to clock in at work. Apply more restrictive measures:
+                            </p>
+                            <ul>
+                                <li>Expected transfer in one click</li>
+                                <li>Weekly massive transfer</li>
+                                <li>Flexible entry and exit</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div>
+                        <article>
+                            <img src="assets/img/the-most-intuitive-time-control-app.png"
+                                alt="intuitive-time-control-app-image">
+                            <h4>The most intuitive time control app</h4>
+                            <p>
+                                Registration of the day from anywhere to promote teleworking and self-management of
+                                time.
+                            </p>
+                            <ul>
+                                <li>24 hours access from anywhere</li>
+                                <li>Geolocated transfer detection system</li>
+                                <li>Instant notifications and alerts</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <img src="assets/img/project-management-done-well.png" alt="project-management-image">
+                            <h4>Project Management Done Well</h4>
+                            <p>
+                                Advanced controls and features to effortlessly control all your projects
+                            </p>
+                            <ul>
+                                <li>Browse between different projects</li>
+                                <li>Equiped with graphs and tables</li>
+                            </ul>
+                        </article>
+                    </div>
                 </article>
             </section>
             <section class="company-section">
-                <article>
-                    <h3 class="company-title">Company</h3>
+                    <h3>Company</h3>
                     <article>
                         <img src="assets/img/tower-black.png" alt="tower-black-image">
-                        <h4 class="name-company-title">Gigatech Software Solutions SA building.</h4>
-                        <p class="name-company-paragraph">
-                            Trackgenix is a HR software company that streamlines human resource management for clients
-                            in more than 1200 cities around the world
-                        </p>
+                        <div>
+                            <h4>Gigatech Software Solutions SA building.</h4>
+                            <p>
+                                Trackgenix is a HR software company that streamlines human resource management for
+                                clients in more than 1200 cities around the world
+                            </p>
+                        </div>
                     </article>
-                    <article class="container-workplace-article">
-                        <h4 class="workplace-company-title">An inclusive workplace for everyone.</h4>
-                        <p class="workplace-company-paragraph">
-                            Get to know our team and our offices and join us in our leap towards better human resources
-                            management.
-                            Learn how companies from all sectors already manage talent in a more efficient and humane
-                            way with our human resource software.
-                        </p>
+                    <article class="container-article">
                         <img src="assets/img/it-team.png" alt="it-team-image">
+                        <div>
+                            <h4>An inclusive workplace for everyone.</h4>
+                            <p>
+                                Get to know our team and our offices and join us in our leap towards better human
+                                resources management.
+                                Learn how companies from all sectors already manage talent in a more efficient and
+                                humane way with our human resource software.
+                            </p>
+                        </div>
                     </article>
                     <article>
                         <img src="assets/img/tower-white.png" alt="tower-white-image">
-                        <h4 class="slogan-company-title">Our workplace, our world.</h4>
-                        <p class="slogan-company-paragraph">
-                            Trackgenix was created remotely in 2008 by Yves Hiernaux and Mic Cvilic after many years of
-                            working with hard-to-manage and even harder-to-understand reports and timesheets.
-                            Although we have grown, we continue with the same goal of offering a flexible, reliable and
-                            easy-to-use time control tool.
-                        </p>
+                        <div>
+                            <h4>Our workplace, our world.</h4>
+                            <p>
+                                Trackgenix was created remotely in 2008 by Yves Hiernaux and Mic Cvilic after many
+                                years of working with hard-to-manage and even harder-to-understand reports and
+                                timesheets.
+                                Although we have grown, we continue with the same goal of offering a flexible, reliable
+                                and easy-to-use time control tool.
+                            </p>
+                        </div>
                     </article>
-                </article>
             </section>
             <section class="support-section">
                 <article>
-                    <h3 class="support-title">Support</h3>
-                    <article>
-                        <img src="assets/img/developer.png" alt="developer-image" class="developer-image">
-                        <p class="developer-paragraph">
-                            Phone call or Video conference support from 8am to 4pm everyday
-                        </p>
-                    </article>
-                    <article>
-                        <img src="assets/img/software-support.png" alt="support-image" class="support-image">
-                        <p class="support-paragraph">
-                            24hs support by online chat-bot
-                        </p>
-                    </article>
+                    <h3>Support</h3>
+                    <div>
+                        <article>
+                            <img src="assets/img/developer.png" alt="developer-image">
+                            <p>
+                                Phone call or Video conference support from 8am to 4pm everyday
+                            </p>
+                        </article>
+                        <article>
+                            <img src="assets/img/software-support.png" alt="support-image">
+                            <p>
+                                24hs support by online chat-bot
+                            </p>
+                        </article>
+                    </div>
                 </article>
             </section>
             <section class="tutorials-section">
-                <article>
-                    <h3 class="tutorial-title">Tutorials</h3>
-                    <ol class="ordered-list">
-                        <li>"TrackGenix: Quick Start Guide"</li>
-                        <li>"How to set up TrackGenix for your company: In-depth guide"</li>
-                        <li>"Project Management using TrackGenix"</li>
-                        <li>"Unlocking Max Productivity: Advanced Tips and Tricks for Workers"</li>
-                        <li>"Report Reviews Guide"</li>
-                        <li>"Google Calendar & other web services integration"</li>
-                    </ol>
-                    <article class="time-duration-container">
-                        <p>05:10</p>
-                        <p>31:02</p>
-                        <p>22:15</p>
-                        <p>12:40</p>
-                        <p>09:10</p>
-                        <p>11:25</p>
+                    <h3>Tutorials</h3>
+                    <article>
+                        <ol>
+                            <li>
+                                <div class="div-container-li">
+                                    "TrackGenix: Quick Start Guide" <span>05:10</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="div-container-li">
+                                    "How to set up TrackGenix for your company: In-depth guide" <span>31:02</span>
+                                </div>  
+                            </li>
+                            <li>
+                                <div class="div-container-li">
+                                    "Project Management using TrackGenix" <span>22:15</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="div-container-li">
+                                    "Unlocking Max Productivity: Advanced Tips and Tricks for Workers" <span>12:40
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="div-container-li">
+                                    "Report Reviews Guide"<span>09:10</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="div-container-li">
+                                    "Google Calendar & other web services integration"<span>11:25</span>
+                                </div>
+                            </li>
+                        </ol>
                     </article>
-                    <a href="http://youtube.com" target="_blank">
-                        <button type="button" class="yt-button">
-                            <div class="text-button-container">
-                                Browse Full Playlist on YouTube
-                            </div>
-                        </button>
-                    </a>
-                </article>
+                    <div class="yt-button-container">
+                        <a href="http://youtube.com" target="_blank">
+                            <button type="button" class="yt-button">
+                                <div class="text-button-container">
+                                    Browse Full Playlist on YouTube
+                                </div>
+                            </button>
+                        </a>
+                    </div>
             </section>
         </main>
         <footer>
