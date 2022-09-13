@@ -25,7 +25,7 @@
     6 - You can use the following link to see the project, you can also use the element inspector to evaluate the 
         responsive design of the site
 
-        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-04/
+        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
     	Responsive Design -> Breakpoints: 390px, 768px & 1200px
 
