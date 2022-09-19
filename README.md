@@ -25,9 +25,14 @@
     6 - You can use the following link to see the project, you can also use the element inspector to evaluate the 
         responsive design of the site
 
-        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
+        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-04/
 
     	Responsive Design -> Breakpoints: 390px, 768px & 1200px
+
+    7 - You can use the following link to see the project, you can also use the element inspector (F12), in "Console" 
+        section
+
+        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-05/
 
 ## Technologies
 
@@ -35,6 +40,7 @@
         2 - GIT
         3 - CSS
         4 - GitHub Pages
+        5 - JavaScript 
 
 ## Week 01
 
@@ -57,9 +63,20 @@ _Emanuel Muises_
 
 ## Week 04 
 
-- In this week, we start using flexbox, based on the fundamentals of responsive design, also using media queries.
+- In this week, We start using flexbox, based on the fundamentals of responsive design, also using media queries.
 
 - You will also find in the first steps section, the link that will allow you to preview the project on github pages 
   WITHOUT having to clone the repository locally
+
+_Emanuel Muises_
+
+## Week 05 
+
+- In this week, we start learning JavaScript and implementing it by using and applying it in the browser console, using 
+  alert methods, and more..
+
+- We have started to use and learn variables and operators, strings, arrays, conditionals, loops, and 
+  functions(without arrow function yet).
+- You can use -> github pages link found in the "First Steps" section point 7.
 
 _Emanuel Muises_
