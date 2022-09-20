@@ -5,22 +5,14 @@ main {
     top: 91px;
 }
 
-@media (min-width:768px) {
-    main{
-        margin-left: min(30%, 320px);
-        width: max(70%, (100% - 320px) );
-        top: 157px;
-    }
-}
-
 .welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 50rem;
-    margin-top: 5rem;
+    height: 120vh;
+    margin-top: 10vh;
     border-bottom: 1px solid black;
     background: linear-gradient(360deg, rgba(244, 249, 247, 0.12) 22.92%, rgba(209, 227, 229, 0.45) 59.37%,
     #E5F2F4 86.41%);
@@ -32,17 +24,7 @@ main {
     flex-direction: column-reverse;
 }
 
-@media only screen and ( min-width: 1200px) {
-    .welcome-section > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: baseline;
-    }
-}
-
 .welcome-section h2 {
-    width: 17rem;
     padding: 10px 40px 17px;
     background-color: #aace9b8e;
     border: 2px solid black;
@@ -52,18 +34,18 @@ main {
 }
 
 .welcome-section div > p {
-    width: 20.25rem;
+    width: 320px;
     margin: auto;
-    margin-bottom: 2rem;
-    padding: 1rem;
+    margin-bottom: 32px;
+    padding: 16px;
     text-align: center;
 }
 
 .welcome-section div > img {
-    width: 20.25rem;
+    max-width: 360px;
     margin: auto;
-    margin-bottom: 1rem;
-    padding: 1rem;
+    margin-bottom: 16px;
+    padding: 16px;
 }
 
 .app-features-section {
@@ -72,13 +54,13 @@ main {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 40.73rem;
-    margin: 3rem;
+    height: 640px;
+    margin: 48px;
     border-bottom: 1px solid black;
 }
 
 .app-features-section h2 {
-    margin: 2rem;
+    margin: 32px;
     font-size: 1.5rem;
     font-weight: bold;
     color: #373867;
@@ -88,7 +70,7 @@ main {
     display: flex;
     justify-content: space-around;
     width: 80%;
-    margin-bottom: 6.5rem;
+    margin-bottom: 100px;
 }
 
 .app-features-section div article {
@@ -96,13 +78,13 @@ main {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    width: 11rem;
-    height: 11rem;
+    width: 176px;
+    height: 176px;
 }
 
 .app-features-section div article h3 {
     width: 100%;
-    margin: 1rem;
+    margin: 16px;
     font-weight: 700;
     text-align: center;
     color: #373867;
@@ -110,20 +92,18 @@ main {
 
 .app-features-section article > img {
     width: 75%;
-    padding: 0.5rem;
+    padding: 8px;
     background-color: #aace9b6b;
     border-radius: 12.5%;
-    min-height: 104px;
-    min-width: 104px;
 }
 
 .reasons-section {
-    height: 53rem;
-    margin-bottom: 3rem;
+    height: 100%;
+    margin-bottom: 50px;
 }
 
 .reasons-section h2 {
-    margin: 3rem;
+    margin: 45px;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -139,40 +119,21 @@ main {
     margin: auto;
 }
 
-@media (min-width: 1200px) {
-    .reasons-section > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: auto;
-    }
-    .reasons-section article div > p {
-        width: 70%;
-        padding: 0.5rem;
-        font-weight: 500;
-        font-size: .8rem;
-        color: #373867;
-    }
-
-}
-
 .reasons-section article {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin: 1rem;
+    margin: 16px;
     padding-left: 10%;
 }
 
 .reasons-section article > img {
-    padding: .5rem;
+    padding: 8px;
 }
 
 .reasons-section article div > h3 {
-    padding: .5rem;
+    padding: 8px;
     font-weight: 700;
     font-size: 1rem;
     color: #373867;
@@ -180,7 +141,7 @@ main {
 
 .reasons-section article div > p {
     width: 94%;
-    padding: 0.5rem;
+    padding: 8px;
     font-weight: 500;
     font-size: .8rem;
     color: #373867;
@@ -191,7 +152,7 @@ main {
 }
 
 .form-section article > h3 {
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
     font-size: 1.5rem;
     color: #373867;
 }
@@ -199,7 +160,7 @@ main {
 .form-section article form > input, select {
     display: block;
     width: 90%;
-    margin: 1rem;
+    margin: 16px;
 }
 
 .submit-button {
@@ -221,12 +182,12 @@ main {
 
 .message {
     width: 100%;
-    height: 10rem;
+    height: 160px;
 }
 
 .submit-button {
     width: 50%;
-    margin: 1rem auto;
+    margin: 16px auto;
     padding: 15px 40px;
     background-color: #46A07B;
     border: 0px;
@@ -240,20 +201,21 @@ main {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 1rem;
+    padding: 16px;
     background: linear-gradient(180deg, rgba(198, 226, 230, 0.6399) 1.57%, rgba(88, 151, 159, 0.2212) 19.27%, 
     rgba(71, 147, 129, 0.1343) 35.94%, rgba(165, 207, 187, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
 }
 
 .mission-section article > h3 {
     display: inline-block;
-    width: 13rem;
-    margin: 2rem 0rem;
-    padding: 0.6rem;
+    width: 200px;
+    margin: 32px 0;
+    padding: 10px;
     background-color: #474afa46;
-    border-radius: 0.8rem;
+    border-radius: 15px;
     font-size: 1.2rem;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .mission-section article div > div {
@@ -284,36 +246,36 @@ main {
 }
 
 .mission-section article div div > img {
-    width: 6rem;
+    width: 100px;
 }
 
 .mission-first-paragraph {
+    margin: 16px auto;
     font-size: .9rem;
     font-style: italic;
     font-weight: 700;
-    margin: 1rem auto;
     text-align: center;
 }
 
 .mission-secondary-paragraph {
+    margin: 16px auto;
     font-size: .9rem;
     font-weight: 400;
-    margin: 1rem auto;
     text-align: center;
 }
 
 .mission-section article div > h4 {
     width: 90%;
+    margin: 32px auto;
     text-align: center;
-    margin: 2rem auto;
     font-size: 1.3rem;
-    color: #373867;
     font-weight: 600;
+    color: #373867;
 }
 
 .quote {
     width: 95.7%;
-    margin: 1rem auto;
+    margin: 16px auto;
     text-align: center;
     font-size: 1rem;
     font-style: italic;
@@ -321,7 +283,7 @@ main {
 
 .quote-customer-paragraph {
     width: 95.7%;
-    margin: 1rem auto;
+    margin: 16px auto;
     text-align: right;
     font-size: 1rem;
     font-style: italic;
@@ -329,20 +291,20 @@ main {
 
 .about-us-section {
     width: 90%;
-    padding: 1rem;
+    padding: 16px;
 }
 
 .about-us-section h3 {
     justify-self: flex-start;
     width: 100%;
-    padding: .5rem;
+    padding: 8px;
     font-size: 1.2rem;
     font-weight: 700;
     color: #373867;
 }
 
 .about-us-section p {
-    margin: 1rem;
+    margin: 16px;
     font-size: 1rem;
     text-align: center;
     color: #373867;
@@ -357,26 +319,21 @@ main {
     max-width: 60%;
 }
 
-@media only screen and ( min-width: 1200px) {
-    .container {
-        display: flex;
-    }
-}
-
 .our-products-section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 1rem;
+    padding: 16px;
     font-family: 'Roboto', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 .our-products-section article > h3 {
+    margin: 16px;
     font-size: 1.5rem;
     font-weight: 700;
-    margin: 1rem;
+    text-decoration: underline;
 }
 
 .our-products-section article > div {
@@ -387,34 +344,27 @@ main {
 }
 
 .our-products-section article div > article {
-    padding: 1rem;
+    padding: 16px;
     max-width: 390px;
 }
 
 .our-products-section article div article > h4 {
-    margin: 1rem;
+    margin: 16px;
     font-size: 1rem;
     font-weight: bold;
 }
 
 .our-products-section article div article > p {
-    margin: 1rem;
+    margin: 16px;
     font-size: 1rem;
     font-weight: 300;
 }
 
 .our-products-section article div article > ul {
-    margin: 1.5rem;
+    margin: 24px;
     font-size: 1rem;
     font-weight: 300;
     list-style-type: disc;
-}
-
-@media only screen and ( min-width: 1200px) {
-    .our-products-section article > div {
-        display: flex;
-        align-items: baseline;
-    }
 }
 
 .company-section {
@@ -425,10 +375,11 @@ main {
 }
 
 .company-section h3 {
+    margin: 16px;
     font-size: 1.5rem;
-    margin: 1rem;
     font-size: 26px;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .company-section > article {
@@ -440,31 +391,18 @@ main {
 }
 
 .company-section article > img {
-    max-width: 15rem;
+    max-width: 240px;
 }
 
 .company-section article > div {
-    max-width: 40rem;
-    margin: .5rem;
+    max-width: 640px;
+    margin: 8px;
 }
 
 .company-section article div > h4 {
     font-size: 1rem;
     font-weight: bold;
-    margin: .5rem;
-}
-
-@media only screen and ( min-width: 768px) {
-    .company-section > article {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .company-section > article.container-article {
-        flex-direction: row-reverse;
-    }
+    margin: 8px;
 }
 
 .support-section {
@@ -474,9 +412,10 @@ main {
 }
 
 .support-section article > h3 {
-    margin: 2rem;
+    margin: 32px;
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .support-section article > div {
@@ -490,17 +429,8 @@ main {
 }
 
 .support-section article div article p {
-    margin: 1rem;
+    margin: 16px;
     text-align: center;
-}
-
-@media only screen and ( min-width: 1200px) {
-    .support-section article > div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
 }
 
 .tutorials-section {
@@ -520,7 +450,7 @@ main {
     font-weight: 400;
     font-style: italic;
     list-style: decimal;
-} 
+}
 
 .div-container-li {
     display: flex;
@@ -533,18 +463,18 @@ main {
 }
 
 .yt-button-container {
+    margin: 32px;
     text-align: center;
-    margin: 2rem;
 }
 
 .yt-button {
     max-width: 80%;
-    height: 5rem;
-    padding: .3rem;
+    height: 100px;
+    padding: 10px;
     background-color: #98220D;
     box-shadow: 0px 4px 2px rgb(0 0 0 / 25%);
-    filter: blur(0.2px);
     border-radius: 30px;
+    filter: blur(0.2px);
 }
 
 .text-button-container {
@@ -555,32 +485,56 @@ main {
     color: #FFFFFF;
 }
 
-footer div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media (min-width: 768px){
-    footer{
+@media (min-width:768px) {
+    main{
+        width: max(70%, (100% - 320px) );
         margin-left: min(30%, 320px);
+        top: 157px;
+    }
+    .company-section > article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .company-section > article.container-article {
+        flex-direction: row-reverse;
     }
 }
 
-.media-social-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    background-color: #373867;
-}
-
-.localitation-info-container {
-    padding: 0.5rem;
-    margin: 1rem;
-    font-size: .8rem;
-    font-weight: 500;
+@media (min-width: 1200px) {
+    .welcome-section > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    .reasons-section > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    .reasons-section article div > p {
+        width: 70%;
+        padding: 8px;
+        font-weight: 500;
+        font-size: .8rem;
+        color: #373867;
+    }
+    .container {
+        display: flex;
+    }
+    .our-products-section article > div {
+        display: flex;
+        align-items: baseline;
+    }
+    .support-section article > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }

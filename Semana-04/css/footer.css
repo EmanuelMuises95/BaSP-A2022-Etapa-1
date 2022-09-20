@@ -1,0 +1,29 @@
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.media-social-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    margin: 8px;
+    background-color: #373867;
+}
+
+.localitation-info-container {
+    padding: 8px;
+    margin: 16px;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+@media (min-width: 768px){
+    footer{
+        margin-left: min(30%, 320px);
+    }
+}

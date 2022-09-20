@@ -13,7 +13,7 @@
 }
 
 .top-nav:nth-child(1) {
-    padding: .5rem;
+    padding: 8px;
 }
 
 .top-nav > h1 {
@@ -24,9 +24,9 @@
 .navegation-nav {
     display: none;
     position: fixed;
-    top: 91px;
     width: max(70%, (100% - 320px) );
     height: 56px;
+    top: 91px;
     margin-left: min(30%, 320px);
     background-color: #373867;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
@@ -48,14 +48,14 @@
 }
 
 .navegation-nav ul li {
-    width: 16.5%;
-    height: 100%;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 16.5%;
+    height: 100%;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
+    text-align: center;
 }
 
 .navegation-nav ul li button {
