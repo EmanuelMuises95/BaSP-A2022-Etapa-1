@@ -79,4 +79,9 @@ _Emanuel Muises_
   functions(without arrow function yet).
 - You can use -> github pages link found in the "First Steps" section point 7.
 
+- This week, we correct errors in syntax, css selectors, relative and absolute measurements and more, in the
+  problem of week 04.
+- To verify the changes you can use the link found in the "first steps" section point .6 and see the changes
+  in the repository code
+
 _Emanuel Muises_
