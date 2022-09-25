@@ -26,8 +26,32 @@ main {
     color: #46A07B;
 }
 
-#text-email, #user-password {
-    margin: 10px 5px 30px 5px;
+#input-text-email, #input-user-password {
+    margin: 10px 5px 15px 5px;
+}
+
+.red-border {
+    border: 2px solid red;
+}
+
+.green-border {
+    border: 2px solid #46A07B;
+}
+
+#error-first-paragraph {
+    margin-bottom: 10px;
+    font-size: .8rem;
+    color: red;
+}
+
+#error-second-paragraph {
+    margin-bottom: 10px;
+    font-size: .8rem;
+    color: red;
+}
+
+.hidden {
+    display: none;
 }
 
 input[type=submit] {
@@ -43,8 +67,8 @@ input[type=submit] {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 70%;
-        height: 100vh;
-        margin-top: 91px;
+        width: 75%;
+        height: 62%;
+        margin-top: 147px;
     }
 }
