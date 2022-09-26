@@ -54,7 +54,7 @@ main {
     display: none;
 }
 
-input[type=submit] {
+input[type=button] {
     padding: 5% 10%;
     background-color: #46A07B;
     border-radius: 15px;
