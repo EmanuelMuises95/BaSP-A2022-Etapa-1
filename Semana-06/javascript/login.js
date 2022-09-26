@@ -1,18 +1,16 @@
 window.onload = function() {
+    
+    // Email
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var inputTextEmail = document.getElementById('input-text-email');
     var paragraphFirstInput = document.getElementById('error-first-paragraph');
-    var inputUserPassword = document.getElementById('input-user-password');
-    var paragraphSecondInput = document.getElementById('error-second-paragraph');
-
-    // Email
+    
     paragraphFirstInput.classList.add('hidden');
 
     function removeBorder(color){
         if(inputTextEmail.classList.contains(color)){
             inputTextEmail.classList.remove(color);
         }
-        
     }
 
     inputTextEmail.onblur = function () {
@@ -34,23 +32,67 @@ window.onload = function() {
     };
 
     // Password
-    var passExp = /^[A-Za-z0-9]*$/;
+    var inputUserPassword = document.getElementById('input-user-password');
+    var paragraphSecondInput = document.getElementById('error-second-paragraph');
 
+    var letters = 'abcdefghijklmnñopqrstuvwxyz';
+    var numbers = '0123456789';
+    
     paragraphSecondInput.classList.add('hidden');
 
-    function removeBorderTwo(color){
-        if (inputUserPassword.classList.contains(color)) {
+    function removeBordertwo(color){
+        if(inputUserPassword.classList.contains(color)){
             inputUserPassword.classList.remove(color);
-        };
-    };
+        }
+    }
+
+    function validatePassword() {
+        var findLetter = 0;
+        var findNumber = 0;
+        var stringLowerCase = inputUserPassword.value.toLowerCase();
+
+        for (var i = 0; i < stringLowerCase.length; i++) {
+            for (var j = 0; j < letters.length; j++) {
+                if (stringLowerCase.charAt(i) === letters.charAt(j)) {
+                    findLetter++
+                }
+            }
+            for (var k = 0; k < numbers.length; k++) {
+                if (stringLowerCase.charAt(i) === numbers.charAt(k)) {
+                    findNumber++
+                }
+            }
+        }
+        
+        if (stringLowerCase.length == findLetter + findNumber && findLetter > 0 && findNumber > 0) {
+            removeBordertwo('red-border');
+            inputUserPassword.classList.add('green-border');
+            paragraphSecondInput.classList.add('hidden');
+        } else {
+            removeBordertwo('green-border');
+            inputUserPassword.classList.add('red-border');
+            paragraphSecondInput.classList.remove('hidden');
+        }
+    }
 
     inputUserPassword.onblur = function () {
-        if (inputUserPassword.value.match(passExp)) {
-            inputUserPassword.classList.add('green-border');
-        } else if (!inputUserPassword.value.match(passExp)) {
-            inputUserPassword.classList.add('red-border');
-        } else if (inputUserPassword.value == '') {
-            inputUserPassword.classList.add('red-border');
+        validatePassword();
+    }
+
+    inputUserPassword.onfocus = function () {
+        inputUserPassword.classList.remove('green-border');
+        inputUserPassword.classList.remove('red-border');
+    }
+
+    // Button
+    var buttonLogin = document.getElementById('login');
+
+    buttonLogin.onclick = function () {
+        if (inputTextEmail.value.match(emailExpression) && !inputTextEmail.value == '') {
+            alert(inputTextEmail.value +'\n'+ inputUserPassword.value);
+        } else {
+            alert('Corrobore los campos')
         }
-    };
+    }
+
 };
