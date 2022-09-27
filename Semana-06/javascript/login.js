@@ -82,17 +82,28 @@ window.onload = function() {
     inputUserPassword.onfocus = function () {
         inputUserPassword.classList.remove('green-border');
         inputUserPassword.classList.remove('red-border');
+        paragraphSecondInput.classList.add('hidden');
     }
 
     // Button
     var buttonLogin = document.getElementById('login');
+    var errorsAll = document.querySelectorAll('form.login-form > p');
+    console.log(errorsAll);
+    var countCheck = 0;
 
     buttonLogin.onclick = function () {
-        if (inputTextEmail.value.match(emailExpression) && !inputTextEmail.value == '') {
+        
+        for (var i = 0; i < errorsAll.length; i++) {
+            if (errorsAll[i].classList.contains('hidden')) {
+                countCheck++;
+            } 
+        }
+
+        if (countCheck == 2) {
             alert(inputTextEmail.value +'\n'+ inputUserPassword.value);
         } else {
-            alert('Corrobore los campos')
+            alert('Corrobore los campos');
         }
     }
-
+    
 };
