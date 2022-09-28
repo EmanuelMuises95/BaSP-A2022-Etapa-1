@@ -351,11 +351,12 @@ window.onload = function () {
             if (errorsAll[i].classList.contains('hidden')) {
                 countCheck++
                 arrayError.pop()
-                continue
             } else if (!errorsAll[i].classList.contains('hidden')) {
                 countCheck--
                 arrayError.push('\n' + errorsAll[i].textContent + ' -> Invalid or empty Input');
-                continue
+            } else {
+                countCheck--
+                arrayError.push('\n' + errorsAll[i].textContent + ' -> Invalid or empty Input');
             }
         }
         console.log(countCheck);

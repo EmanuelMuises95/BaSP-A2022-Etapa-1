@@ -34,6 +34,10 @@
 
         $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-05/
 
+    8 - You can use the following link to see the project and worked this week
+
+        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-06/views/login.html
+
 ## Technologies
 
         1 - HTML
@@ -77,11 +81,28 @@ _Emanuel Muises_
 
 - We have started to use and learn variables and operators, strings, arrays, conditionals, loops, and 
   functions(without arrow function yet).
+
 - You can use -> github pages link found in the "First Steps" section point 7.
 
 - This week, we correct errors in syntax, css selectors, relative and absolute measurements and more, in the
   problem of week 04.
+
 - To verify the changes you can use the link found in the "first steps" section point .6 and see the changes
   in the repository code
 
 _Emanuel Muises_
+
+## Week 06
+
+- In this week, we started with JavaScript validations for "Login and Sing-Up" 
+  forms.
+
+- This week's problem consisted of verifying that the fields did not contain
+  errors, were empty and met certain requirements proposed for this week.
+
+- We also created the layouts for login and sing-up respecting the formats in figma 
+  and confirming that everything looks good, using and recycling the styles created
+  in previous weeks
+
+- You can find the link that allows the correct visualization of what was said 
+  above, in the First steps section, .8 point
