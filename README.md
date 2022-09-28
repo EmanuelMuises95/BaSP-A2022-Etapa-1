@@ -106,3 +106,5 @@ _Emanuel Muises_
 
 - You can find the link that allows the correct visualization of what was said 
   above, in the First steps section, .8 point
+
+_Emanuel Muises_
