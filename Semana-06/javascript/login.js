@@ -88,22 +88,33 @@ window.onload = function() {
     // Button
     var buttonLogin = document.getElementById('login');
     var errorsAll = document.querySelectorAll('form.login-form > p');
-    console.log(errorsAll);
     var countCheck = 0;
+    var arrayError = [];
 
     buttonLogin.onclick = function () {
-        
-        for (var i = 0; i < errorsAll.length; i++) {
+        countCheck = 0;
+        arrayError.pop()
+        for ( var i = 0 ; i < errorsAll.length ; i++ ) {
             if (errorsAll[i].classList.contains('hidden')) {
-                countCheck++;
-            } 
+                countCheck++
+                arrayError.pop()
+            } else if (!errorsAll[i].classList.contains('hidden')) {
+                countCheck--
+                arrayError.push('\n' + errorsAll[i].textContent + ' -> Invalid or empty Input');
+            } else {
+                countCheck--
+                arrayError.push('\n' + errorsAll[i].textContent + ' -> Invalid or empty Input');
+            }
         }
+        console.log(countCheck);
+        console.log(arrayError);
 
         if (countCheck == 2) {
-            alert(inputTextEmail.value +'\n'+ inputUserPassword.value);
+            alert ('Email: ' + inputTextEmail.value + '\n' +
+                'Password: ' + inputUserPassword.value + '\n');
         } else {
-            alert('Corrobore los campos');
+            alert (arrayError);
         }
-    }
-    
+    };
+
 };

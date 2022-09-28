@@ -122,7 +122,7 @@ window.onload = function () {
     cellphoneNumberInput.onblur = function () {
         if (isNaN(cellphoneNumberInput.value) || cellphoneNumberInput.value == 0 || cellphoneNumberInput.value.length
         != 10) {
-            cellphoneNumberInput.classList.remove('green-border')
+            cellphoneNumberInput.classList.remove('green-border');
             cellphoneNumberInput.classList.add('red-border');
             cellphoneError.classList.remove('hidden');
         } else {
@@ -143,10 +143,69 @@ window.onload = function () {
     var directionError = document.getElementById('direction-error-paragraph');
     directionError.classList.add('hidden');
 
+    directionInput.onblur = function () {
+        if (directionInput.value.length < 5 || !lettersNumberSpaces(directionInput.value.trim())) {
+            directionInput.classList.remove('green-border');
+            directionInput.classList.add('red-border');
+            directionError.classList.remove('hidden');
+        } else {
+            directionInput.classList.remove('red-border');
+            directionInput.classList.add('green-border');
+            directionError.classList.add('hidden');
+        }
+    }
+
+    directionInput.onfocus = function () {
+        directionInput.classList.remove('green-border');
+        directionInput.classList.remove('red-border');
+        directionError.classList.add('hidden');
+    }
+
     // Location
     var locationInput = document.getElementById('location');
     var locationError = document.getElementById('location-error-paragraph');
     locationError.classList.add('hidden');
+
+    function lettersNumber (array) {
+        for (var i = 0 ; i < array.length ; i++) {
+            if ((array.charCodeAt(i) >= 48 && array.charCodeAt(i) <= 57) || (array.charCodeAt(i) >= 65 &&
+            array.charCodeAt(i) <= 90) || (array.charCodeAt(i) >= 97 && 1)) {
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function lettersNumberSpaces (array) {
+        for (var i = 0 ; i < array.length ; i++) {
+            if ((array.charCodeAt(i) >= 48 && array.charCodeAt(i) <= 57) || (array.charCodeAt(i) >= 65 &&
+            array.charCodeAt(i) <= 90) || (array.charCodeAt(i) >= 97 && array.charCodeAt(i) <= 122) ||
+            (array.charCodeAt(i) === 32)) {
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    locationInput.onblur = function () {
+        if (locationInput.value == '' || locationInput.value.length <= 3 || !lettersNumberSpaces(locationInput.value)) {
+            locationInput.classList.remove('green-border');
+            locationInput.classList.add('red-border');
+            locationError.classList.remove('hidden');
+        } else {
+            locationInput.classList.remove('red-border');
+            locationInput.classList.add('green-border');
+            locationError.classList.add('hidden');
+        }
+    }
+
+    locationInput.onfocus = function () {
+        locationInput.classList.remove('green-border');
+        locationInput.classList.remove('red-border');
+        locationError.classList.add('hidden');
+    }
 
     // CP
     var cpInput = document.getElementById('cp');
@@ -280,36 +339,45 @@ window.onload = function () {
     };
 
     // Button
-    var buttonLogin = document.getElementById('sing-up');
+    var buttonSingUp = document.getElementById('sing-up');
     var errorsAll = document.querySelectorAll('form.login-form > p');
-    console.log(errorsAll);
     var countCheck = 0;
+    var arrayError = [];
 
-    buttonLogin.onclick = function () {
-        
-        for (var i = 0; i < errorsAll.length; i++) {
+    buttonSingUp.onclick = function () {
+        countCheck = 0;
+        arrayError.pop()
+        for ( var i = 0 ; i < errorsAll.length ; i++ ) {
             if (errorsAll[i].classList.contains('hidden')) {
-                countCheck++;
-            } 
+                countCheck++
+                arrayError.pop()
+                continue
+            } else if (!errorsAll[i].classList.contains('hidden')) {
+                countCheck--
+                arrayError.push('\n' + errorsAll[i].textContent + ' -> Invalid or empty Input');
+                continue
+            }
         }
+        console.log(countCheck);
+        console.log(arrayError);
 
         if (countCheck == 11) {
-            alert(firstNameInput.value + '\n' 
-                + lastNameInput.value + '\n'
-                + dniNumberInput.value + '\n'
-                + dateBornInput.value + '\n'
-                + cellphoneNumberInput.value + '\n'
-                + directionInput.value + '\n'
-                + locationInput.value + '\n'
-                + cpInput.value + '\n'
-                + emailInput.value + '\n'
-                + passwordInput.value + '\n'
-                + repeatPasswordInput.value);
+            alert ('First Name: ' + firstNameInput.value + '\n' +
+                'Last Name: ' + lastNameInput.value + '\n' + 
+                'DNI number: ' + dniNumberInput.value + '\n' +
+                'Date Born: ' + dateBornInput.value + '\n' +
+                'Cellphone: ' + cellphoneNumberInput.value + '\n' +
+                'Address: ' + directionInput.value + '\n' +
+                'Location: ' + locationInput.value + '\n' +
+                'CP: ' + cpInput.value + '\n' +
+                'Email: ' + emailInput.value + '\n' +
+                'Password: ' + passwordInput.value + '\n' +
+                'Repeat Password: ' + repeatPasswordInput.value + '\n');
         } else {
-            alert('Corrobore los campos');
+            alert (arrayError);
         }
-    }
+    };
 
-
+    
 
 };
