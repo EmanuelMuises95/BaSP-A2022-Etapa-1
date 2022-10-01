@@ -1,0 +1,106 @@
+main {
+    width: 100%;
+    margin-top: 91px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 62px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #373867;
+    font-size: 1rem;
+    color: #46A07B;
+}
+
+.login-form div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 1%;
+}
+
+.login-form div p {
+    font-size: .8rem;
+}
+
+input {
+    margin: 5px;
+}
+
+.red-border {
+    border: 2px solid red;
+}
+
+.green-border {
+    border: 2px solid #46A07B;
+}
+
+input[type=button] {
+    padding: 5% 10%;
+    background-color: #46A07B;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.login-form p {
+    margin-bottom: 5px;
+    font-size: .7rem;
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+        margin-top: 147px;
+    }
+    
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        height: 80%;
+        background-color: #373867;
+    }
+    
+    .login-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 1rem;
+        color: #46A07B;
+    }
+    
+    .login-form div {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-top: 1%;
+    }
+}
