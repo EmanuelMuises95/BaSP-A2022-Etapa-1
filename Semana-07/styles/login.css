@@ -26,8 +26,12 @@ main {
     color: #46A07B;
 }
 
+.login-form p {
+    height: 10px ;
+}
+
 #input-text-email, #input-user-password {
-    margin: 10px 5px 15px 5px;
+    margin: 5px;
 }
 
 .red-border {

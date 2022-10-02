@@ -4,7 +4,66 @@ window.onload = function () {
     var nameError = document.getElementById('name-error-paragraph'); 
     nameError.classList.add('hidden');
     
-    var letters = 'abcdefghijklmnñopqrstuvwxyz';
+    var addHidden = function (paragraph, display) {
+        paragraph.classList.add(display);
+    }
+
+    var removeHidden = function (paragraph, display) {
+        paragraph.classList.remove(display);
+    }
+
+    var addBorder = function (input, color) {
+        input.classList.add(color);
+    }
+
+    var removeBorder = function (input, color) {
+        input.classList.remove(color);
+    }
+
+    function lettersNumberSpaces (array) {
+        for (var i = 0 ; i < array.length ; i++) {
+            if ((array.charCodeAt(i) >= 48 && array.charCodeAt(i) <= 57) || (array.charCodeAt(i) >= 65 &&
+            array.charCodeAt(i) <= 90) || (array.charCodeAt(i) >= 97 && array.charCodeAt(i) <= 122) ||
+            (array.charCodeAt(i) === 32)) {
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    var validatePassword = function (input, paragraph) {
+        var findLetter = 0;
+        var findNumber = 0;
+        var stringLowerCase = input.value.toLowerCase();
+        var letters = 'abcdefghijklmnñopqrstuvwxyz';
+        var numbers = '0123456789';
+    
+        for (var i = 0; i < stringLowerCase.length; i++) {
+            for (var j = 0; j < letters.length; j++) {
+                if (stringLowerCase.charAt(i) === letters.charAt(j)) {
+                    findLetter++
+                }
+            }
+            for (var k = 0; k < numbers.length; k++) {
+                if (stringLowerCase.charAt(i) === numbers.charAt(k)) {
+                    findNumber++
+                }
+            }
+            
+            
+        }
+    
+        if (stringLowerCase.length == findLetter + findNumber && findLetter >= 4 && findNumber >= 4) {
+            removeBorder(input, 'red-border');
+            addBorder(input, 'green-border');
+            addHidden(paragraph, 'hidden');
+        } else {
+            removeBorder(input, 'green-border');
+            addBorder(input, 'red-border');
+            removeHidden(paragraph, 'hidden');
+        }
+    }
 
     firstNameInput.onblur = function () {
         var findLetter = 0;
@@ -18,20 +77,20 @@ window.onload = function () {
             }
         }
         if (!isNaN(firstNameInput.value) || firstNameInput == '' || firstNameInput.value.length <= 3) {
-            firstNameInput.classList.remove('green-border')
-            firstNameInput.classList.add('red-border');
-            nameError.classList.remove('hidden');
+            removeBorder(firstNameInput, 'green-border');
+            addBorder(firstNameInput, 'red-border');
+            removeHidden(nameError, 'hidden');
         } else {
-            firstNameInput.classList.add('green-border');
-            firstNameInput.classList.add('green-border');
-            nameError.classList.add('hidden');
+            removeBorder(firstNameInput, 'red-border')
+            addBorder(firstNameInput, 'green-border');
+            addHidden(nameError, 'hidden');
         }
     }
 
     firstNameInput.onfocus = function () {
-        firstNameInput.classList.remove('green-border');
-        firstNameInput.classList.remove('red-border');
-        nameError.classList.add('hidden');
+        removeBorder(firstNameInput, 'green-border');
+        removeBorder(firstNameInput, 'red-border');
+        addHidden(nameError, 'hidden');
     }
 
     // Last Name
@@ -51,20 +110,20 @@ window.onload = function () {
             }
         }
         if (!isNaN(lastNameInput.value) || lastNameInput == '' || lastNameInput.value.length <= 3) {
-            lastNameInput.classList.remove('green-border')
-            lastNameInput.classList.add('red-border');
-            lnameError.classList.remove('hidden');
+            removeBorder(lastNameInput, 'green-border');
+            addBorder(lastNameInput, 'red-border');
+            removeHidden(lnameError, 'hidden');
         } else {
-            lastNameInput.classList.add('green-border');
-            lastNameInput.classList.add('green-border');
-            lnameError.classList.add('hidden');
+            removeBorder(lastNameInput, 'red-border')
+            addBorder(lastNameInput, 'green-border');
+            addHidden(lnameError, 'hidden');
         }
     }
 
     lastNameInput.onfocus = function () {
-        lastNameInput.classList.remove('green-border');
-        lastNameInput.classList.remove('red-border');
-        nameError.classList.add('hidden');
+        removeBorder(lastNameInput, 'green-border');
+        removeBorder(lastNameInput, 'red-border');
+        addHidden(lnameError, 'hidden');
     }
 
     // DNI
@@ -75,20 +134,20 @@ window.onload = function () {
     dniNumberInput.onblur = function () {
         
         if (isNaN(dniNumberInput.value) || dniNumberInput == '' || dniNumberInput.value.length <= 7) {
-            dniNumberInput.classList.remove('green-border')
-            dniNumberInput.classList.add('red-border');
-            dniError.classList.remove('hidden');
+            removeBorder(dniNumberInput, 'green-border');
+            addBorder(dniNumberInput, 'red-border');
+            removeHidden(dniError, 'hidden');
         } else {
-            dniNumberInput.classList.add('green-border');
-            dniNumberInput.classList.add('green-border');
-            dniError.classList.add('hidden');
+            removeBorder(dniNumberInput, 'red-border');
+            addBorder(dniNumberInput, 'green-border');
+            addHidden(dniError, 'hidden');
         }
     }
 
     dniNumberInput.onfocus = function () {
-        dniNumberInput.classList.remove('green-border');
-        dniNumberInput.classList.remove('red-border');
-        dniError.classList.add('hidden');
+        removeBorder(dniNumberInput, 'green-border');
+        removeBorder(dniNumberInput, 'red-border');
+        addHidden(dniError, 'hidden');
     }
 
     // DateBorn
@@ -98,20 +157,20 @@ window.onload = function () {
 
     dateBornInput.onblur = function () {
         if (dateBornInput.value == '') {
-            dateBornInput.classList.remove('green-border')
-            dateBornInput.classList.add('red-border');
-            dateError.classList.remove('hidden');
+            removeBorder(dateBornInput, 'green-border');
+            addBorder(dateBornInput, 'red-border');
+            removeHidden(dateError, 'hidden');
         } else {
-            dateBornInput.classList.add('green-border');
-            dateBornInput.classList.add('green-border');
-            dateError.classList.add('hidden');
+            removeBorder(dateBornInput, 'red-border');
+            addBorder(dateBornInput, 'green-border');
+            addHidden(dateError, 'hidden');
         }
     }
 
     dateBornInput.onfocus = function () {
-        dateBornInput.classList.remove('green-border');
-        dateBornInput.classList.remove('red-border');
-        dateError.classList.add('hidden');
+        removeBorder(dateBornInput, 'green-border');
+        removeBorder(dateBornInput, 'red-border');
+        addHidden(dateError, 'hidden');
     }
 
     // Cellphone
@@ -122,20 +181,20 @@ window.onload = function () {
     cellphoneNumberInput.onblur = function () {
         if (isNaN(cellphoneNumberInput.value) || cellphoneNumberInput.value == 0 || cellphoneNumberInput.value.length
         != 10) {
-            cellphoneNumberInput.classList.remove('green-border');
-            cellphoneNumberInput.classList.add('red-border');
-            cellphoneError.classList.remove('hidden');
+            removeBorder(cellphoneNumberInput, 'green-border');
+            addBorder(cellphoneNumberInput, 'red-border');
+            removeHidden(cellphoneError, 'hidden');
         } else {
-            cellphoneNumberInput.classList.add('green-border');
-            cellphoneNumberInput.classList.add('green-border');
-            cellphoneError.classList.add('hidden');
+            removeBorder(cellphoneNumberInput, 'red-border');
+            addBorder(cellphoneNumberInput, 'green-border');
+            addHidden(cellphoneError, 'hidden');
         }
     }
 
     cellphoneNumberInput.onfocus = function () {
-        cellphoneNumberInput.classList.remove('green-border');
-        cellphoneNumberInput.classList.remove('red-border');
-        cellphoneError.classList.add('hidden');
+        removeBorder(cellphoneNumberInput, 'green-border');
+        removeBorder(cellphoneNumberInput, 'red-border');
+        addHidden(cellphoneError, 'hidden');
     }
 
     // Direction
@@ -145,20 +204,20 @@ window.onload = function () {
 
     directionInput.onblur = function () {
         if (directionInput.value.length < 5 || !lettersNumberSpaces(directionInput.value.trim())) {
-            directionInput.classList.remove('green-border');
-            directionInput.classList.add('red-border');
-            directionError.classList.remove('hidden');
+            removeBorder(directionInput, 'green-border');
+            addBorder(directionInput, 'red-border');
+            removeHidden(directionError, 'hidden');
         } else {
-            directionInput.classList.remove('red-border');
-            directionInput.classList.add('green-border');
-            directionError.classList.add('hidden');
+            removeBorder(directionInput, 'red-border');
+            addBorder(directionInput, 'green-border');
+            addHidden(directionError, 'hidden');
         }
     }
 
     directionInput.onfocus = function () {
-        directionInput.classList.remove('green-border');
-        directionInput.classList.remove('red-border');
-        directionError.classList.add('hidden');
+        removeBorder(directionInput, 'green-border');
+        removeBorder(directionInput, 'red-border');
+        addHidden(directionError, 'hidden');
     }
 
     // Location
@@ -166,45 +225,22 @@ window.onload = function () {
     var locationError = document.getElementById('location-error-paragraph');
     locationError.classList.add('hidden');
 
-    function lettersNumber (array) {
-        for (var i = 0 ; i < array.length ; i++) {
-            if ((array.charCodeAt(i) >= 48 && array.charCodeAt(i) <= 57) || (array.charCodeAt(i) >= 65 &&
-            array.charCodeAt(i) <= 90) || (array.charCodeAt(i) >= 97 && 1)) {
-            } else {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    function lettersNumberSpaces (array) {
-        for (var i = 0 ; i < array.length ; i++) {
-            if ((array.charCodeAt(i) >= 48 && array.charCodeAt(i) <= 57) || (array.charCodeAt(i) >= 65 &&
-            array.charCodeAt(i) <= 90) || (array.charCodeAt(i) >= 97 && array.charCodeAt(i) <= 122) ||
-            (array.charCodeAt(i) === 32)) {
-            } else {
-                return false;
-            }
-        }
-        return true;
-    }
-
     locationInput.onblur = function () {
         if (locationInput.value == '' || locationInput.value.length <= 3 || !lettersNumberSpaces(locationInput.value)) {
-            locationInput.classList.remove('green-border');
-            locationInput.classList.add('red-border');
-            locationError.classList.remove('hidden');
+            removeBorder(locationInput, 'green-border');
+            addBorder(locationInput, 'red-border');
+            removeHidden(locationError, 'hidden');
         } else {
-            locationInput.classList.remove('red-border');
-            locationInput.classList.add('green-border');
-            locationError.classList.add('hidden');
+            removeBorder(locationInput, 'red-border');
+            addBorder(locationInput, 'green-border');
+            addHidden(locationError, 'hidden');
         }
     }
 
     locationInput.onfocus = function () {
-        locationInput.classList.remove('green-border');
-        locationInput.classList.remove('red-border');
-        locationError.classList.add('hidden');
+        removeBorder(locationInput, 'green-border');
+        removeBorder(locationInput, 'red-border');
+        addHidden(locationError, 'hidden');
     }
 
     // CP
@@ -215,170 +251,129 @@ window.onload = function () {
     cpInput.onblur = function () {
         if (isNaN(cpInput.value) || cpInput.value == 0 || cpInput.value.length
         < 4 || cpInput.value.length > 5) {
-            cpInput.classList.remove('green-border')
-            cpInput.classList.add('red-border');
-            cpError.classList.remove('hidden');
+            removeBorder(cpInput, 'green-border');
+            addBorder(cpInput, 'red-border');
+            removeHidden(cpError, 'hidden');
         } else {
-            cpInput.classList.add('green-border');
-            cpInput.classList.add('green-border');
-            cpError.classList.add('hidden');
+            removeBorder(cpInput, 'red-border');
+            addBorder(cpInput, 'green-border');
+            addHidden(cpError, 'hidden');
         }
     }
 
     cpInput.onfocus = function () {
-        cpInput.classList.remove('green-border');
-        cpInput.classList.remove('red-border');
-        cpError.classList.add('hidden');
+        removeBorder(cpInput, 'green-border');
+        removeBorder(cpInput, 'red-border');
+        addHidden(cpError, 'hidden');
     }
 
     // Email
     var emailInput = document.getElementById('text-email');
     var emailError = document.getElementById('email-error-paragraph');
-    emailError.classList.add('hidden');
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-
-    function removeBorder(color){
-        if(emailInput.classList.contains(color)){
-            emailInput.classList.remove(color);
-        }
-    }
+    
+    addHidden(emailError, 'hidden');
 
     emailInput.onblur = function () {
         if (emailInput.value.match(emailExpression)) {
-            removeBorder('red-border')
-            emailInput.classList.add('green-border');
-            emailError.classList.add('hidden');
+            removeBorder(emailInput, 'red-border');
+            addBorder(emailInput, 'green-border');
+            addHidden(emailError, 'hidden');
         } else {
-            removeBorder('green-border')
-            emailInput.classList.add('red-border');
-            emailError.classList.remove('hidden');
+            removeBorder(emailInput, 'green-border');
+            addBorder(emailInput, 'red-border');
+            removeHidden(emailError, 'hidden');
         };
     };
 
     emailInput.onfocus = function () {
-        emailInput.classList.remove('green-border'); 
-        emailInput.classList.remove('red-border');
-        emailError.classList.add('hidden');
+        removeBorder(emailInput, 'green-border');
+        removeBorder(emailInput, 'red-border');
+        addHidden(emailError, 'hidden');
     };
     
 
     // Password
     var passwordInput = document.getElementById('input-user-password');
     var passwordError = document.getElementById('password-error-paragraph');
-    passwordError.classList.add('hidden');
-
-    var letters = 'abcdefghijklmnñopqrstuvwxyz';
-    var numbers = '0123456789';
-
-    function removeBordertwo(color){
-        if(passwordInput.classList.contains(color)){
-            passwordInput.classList.remove(color);
-        }
-    }
-
-    function validatePassword() {
-        var findLetter = 0;
-        var findNumber = 0;
-        var stringLowerCase = passwordInput.value.toLowerCase();
-
-        for (var i = 0; i < stringLowerCase.length; i++) {
-            for (var j = 0; j < letters.length; j++) {
-                if (stringLowerCase.charAt(i) === letters.charAt(j)) {
-                    findLetter++
-                }
-            }
-            for (var k = 0; k < numbers.length; k++) {
-                if (stringLowerCase.charAt(i) === numbers.charAt(k)) {
-                    findNumber++
-                }
-            }
-        }
-        
-        if (stringLowerCase.length == findLetter + findNumber && findLetter >= 4 && findNumber >= 4) {
-            removeBordertwo('red-border');
-            passwordInput.classList.add('green-border');
-            passwordError.classList.add('hidden');
-        } else {
-            removeBordertwo('green-border');
-            passwordInput.classList.add('red-border');
-            passwordError.classList.remove('hidden');
-        }
-    }
+    
+    addHidden(passwordError, 'hidden');
 
     passwordInput.onblur = function () {
-        validatePassword();
+        validatePassword(passwordInput, passwordError);
     }
 
     passwordInput.onfocus = function () {
-        passwordInput.classList.remove('green-border');
-        passwordInput.classList.remove('red-border');
-        passwordError.classList.add('hidden')
+        removeBorder(passwordInput, 'green-border');
+        removeBorder(passwordInput, 'red-border');
+        addHidden(passwordError, 'hidden');
     }
 
     // Repeat Password
     var repeatPasswordInput = document.getElementById('input-repeat-password');
     var repeatError = document.getElementById('repeat-error-paragraph');
-    repeatError.classList.add('hidden');
+    
+    addHidden(repeatError, 'hidden');
 
     repeatPasswordInput.onblur = function () {
         if (repeatPasswordInput.value != passwordInput.value || repeatPasswordInput.value == '') {
-            removeBordertwo('green-border');
-            repeatPasswordInput.classList.add('red-border');
-            repeatError.classList.remove('hidden');
+            removeBorder(repeatPasswordInput, 'green-border');
+            addBorder(repeatPasswordInput, 'red-border');
+            removeHidden(repeatError, 'hidden');
         } else {
-            removeBordertwo('red-border');
-            repeatPasswordInput.classList.add('green-border');
-            repeatError.classList.add('hidden');
+            removeBorder(repeatPasswordInput, 'red-border');
+            addBorder(repeatPasswordInput, 'green-border');
+            addHidden(repeatError, 'hidden');
         }
     };
 
     repeatPasswordInput.onfocus = function () {
-        repeatPasswordInput.classList.remove('green-border'); 
-        repeatPasswordInput.classList.remove('red-border');
-        repeatError.classList.add('hidden');
+        removeBorder(repeatPasswordInput, 'green-border');
+        removeBorder(repeatPasswordInput, 'red-border');
+        addHidden(repeatError, 'hidden');
     };
 
     // Button
     var buttonSingUp = document.getElementById('sing-up');
-    var errorsAll = document.querySelectorAll('form.login-form > p');
-    var countCheck = 0;
-    var arrayError = [];
 
-    buttonSingUp.onclick = function () {
-        countCheck = 0;
-        arrayError.pop()
-        for ( var i = 0 ; i < errorsAll.length ; i++ ) {
-            if (errorsAll[i].classList.contains('hidden')) {
-                countCheck++
-                arrayError.pop()
-            } else if (!errorsAll[i].classList.contains('hidden')) {
-                countCheck--
-                arrayError.push('\n' + errorsAll[i].textContent + ' -> Invalid or empty Input');
-            } else {
-                countCheck--
-                arrayError.push('\n' + errorsAll[i].textContent + ' -> Invalid or empty Input');
-            }
-        }
-        console.log(countCheck);
-        console.log(arrayError);
+    buttonSingUp.onclick = function (e) {
+        e.preventDefault();
 
-        if (countCheck == 11) {
-            alert ('First Name: ' + firstNameInput.value + '\n' +
-                'Last Name: ' + lastNameInput.value + '\n' + 
-                'DNI number: ' + dniNumberInput.value + '\n' +
-                'Date Born: ' + dateBornInput.value + '\n' +
-                'Cellphone: ' + cellphoneNumberInput.value + '\n' +
-                'Address: ' + directionInput.value + '\n' +
-                'Location: ' + locationInput.value + '\n' +
-                'CP: ' + cpInput.value + '\n' +
-                'Email: ' + emailInput.value + '\n' +
-                'Password: ' + passwordInput.value + '\n' +
-                'Repeat Password: ' + repeatPasswordInput.value + '\n');
+        if(firstNameInput.classList.contains('red-border') 
+            || lastNameInput.classList.contains('red-border') 
+            || dniNumberInput.classList.contains('red-border') 
+            || dateBornInput.classList.contains('red-border') 
+            || cellphoneNumberInput.classList.contains('red-border') 
+            || directionInput.classList.contains('red-border') 
+            || locationInput.classList.contains('red-border') 
+            || cpInput.classList.contains('red-border') 
+            || emailInput.classList.contains('red-border') 
+            || passwordInput.classList.contains('red-border') 
+            || repeatPasswordInput.classList.contains('red-border')) {
+            alert('One or more inputs are not valids');
+        } else if (firstNameInput.value == '' 
+                || lastNameInput.value == '' 
+                || dniNumberInput.value == '' 
+                || dateBornInput.value == ''
+                || cellphoneNumberInput.value == '' 
+                || directionInput.value == '' 
+                || locationInput.value == '' 
+                || cpInput.value == '' 
+                || emailInput.value == '' 
+                || passwordInput.value == ''
+                || repeatPasswordInput.value == '') {
+            alert('One or more inputs are empty');
         } else {
-            alert (arrayError);
-        }
+            alert('First name is: ' + firstNameInput.value + '\n' + 
+                    'Last name is: ' + lastNameInput.value + '\n' + 
+                    'Dni is: ' + dniNumberInput.value + '\n' +
+                    'Date born is: ' + dateBornInput.value + '\n' +
+                    'Phone is: ' + cellphoneNumberInput.value + '\n' +
+                    'Address is: ' + directionInput.value + '\n' + 
+                    'Location is: ' + locationInput.value + '\n' + 
+                    'CP is: ' + cpInput.value + '\n' + 
+                    'Email is: ' + emailInput.value + '\n' + 
+                    'Password is: ' + passwordInput.value);
+        };
     };
-
-    
-
 };
