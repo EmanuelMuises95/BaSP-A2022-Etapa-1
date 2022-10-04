@@ -337,6 +337,12 @@ window.onload = function () {
     var buttonSingUp = document.getElementById('sing-up');
 
     buttonSingUp.onclick = function (e) {
+        var yyyy = dateBornInput.value.substring(0 , dateBornInput.value.indexOf('-'));
+        var mm = dateBornInput.value.substring(dateBornInput.value.indexOf('-') + 1, dateBornInput.value.indexOf('-') + 3);
+        var dd = dateBornInput.value.substring(dateBornInput.value.indexOf('-')+ 4 , dateBornInput.value.indexOf('-') + dateBornInput.value.length);
+        var dateArr = [ mm, dd , yyyy];
+        var dateBorn = dateArr.join('/');
+
         e.preventDefault();
 
         if(firstNameInput.classList.contains('red-border') 
@@ -364,16 +370,51 @@ window.onload = function () {
                 || repeatPasswordInput.value == '') {
             alert('One or more inputs are empty');
         } else {
-            alert('First name is: ' + firstNameInput.value + '\n' + 
-                    'Last name is: ' + lastNameInput.value + '\n' + 
-                    'Dni is: ' + dniNumberInput.value + '\n' +
-                    'Date born is: ' + dateBornInput.value + '\n' +
-                    'Phone is: ' + cellphoneNumberInput.value + '\n' +
-                    'Address is: ' + directionInput.value + '\n' + 
-                    'Location is: ' + locationInput.value + '\n' + 
-                    'CP is: ' + cpInput.value + '\n' + 
-                    'Email is: ' + emailInput.value + '\n' + 
-                    'Password is: ' + passwordInput.value);
+            var requestUrl = 
+                'https://basp-m2022-api-rest-server.herokuapp.com/signup?name='+ firstNameInput.value 
+                + '&lastName=' + lastNameInput.value
+                + '&dni=' + dniNumberInput.value
+                + '&dob=' + dateBorn
+                + '&phone=' + cellphoneNumberInput.value
+                + '&address=' + directionInput.value
+                + '&city=' + locationInput.value
+                + '&zip=' + cpInput.value
+                + '&email=' + emailInput.value
+                + '&password=' + passwordInput.value
+                if (repeatPasswordInput.value === passwordInput.value) {
+                    
+                    fetch(requestUrl)
+                        .then(function(response){
+                            return response.json();
+                        })
+                        .then(function(data){
+                            console.log(data);
+                            if(data.success) {
+                                alert(data.msg + '\n' 
+                                + 'Your name is: ' + firstNameInput.value + '\n' 
+                                + 'Your last name is: ' + lastNameInput.value + '\n'
+                                + 'Your dni is: ' + dniNumberInput.value + '\n'
+                                + 'Your date of birthday is: ' + dateBornInput.value + '\n'
+                                + 'Your phone is: ' + cellphoneNumberInput.value + '\n'
+                                + 'Your address is: ' + directionInput.value + '\n'
+                                + 'Your city is: ' + locationInput.value + '\n'
+                                + 'Your zip is: ' + cpInput.value + '\n'
+                                + 'Your email is: ' + emailInput.value + '\n'
+                                + 'Your password is: ' + passwordInput.value + '\n'
+                                );
+                            } else {
+                                console.log(data.errors);
+                                allErrors = [];
+                                for (var i = 0; i < data.errors.length; i++) {
+                                    allErrors += '\n' + data.errors[i].msg
+                                }
+                                throw new Error(allErrors);
+                            }
+                        })
+                        .catch(function(error){
+                            alert(error);
+                        })
+                }
         };
     };
 };

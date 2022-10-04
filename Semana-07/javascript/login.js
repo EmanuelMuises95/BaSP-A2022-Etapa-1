@@ -1,5 +1,4 @@
-window.onload = function() {
-    
+window.onload = function() {    
     // Email
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var inputTextEmail = document.getElementById('input-text-email');
@@ -108,7 +107,25 @@ window.onload = function() {
         } else if (inputUserPassword.value == '') {
             alert('Your password is empty');
         } else {
-            alert('Your email is: ' + inputTextEmail.value + '\n' + 'Your password is: ' + inputUserPassword.value);
-        } 
+            var requestUrl = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputTextEmail.value 
+            + '&password=' + inputUserPassword.value;
+            
+            fetch(requestUrl)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    if (data.success) {
+                        alert(data.msg + '\n' 
+                        + 'Your email is: ' + inputTextEmail.value + '\n' 
+                        + 'Your password is: ' + inputUserPassword.value);                    
+                    } else {
+                        throw new Error(data.msg);
+                    }
+                })
+                .catch(function(error){
+                    alert(error);
+                })
+        }
     };
 };
