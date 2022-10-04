@@ -38,6 +38,10 @@
 
         $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-06/views/login.html
 
+    9 - You can use the following link to see the project and worked this week
+
+        $ https://emanuelmuises95.github.io/BaSP-A2022-Etapa-1/Semana-07/views/login.html
+
 ## Technologies
 
         1 - HTML
@@ -106,5 +110,15 @@ _Emanuel Muises_
 
 - You can find the link that allows the correct visualization of what was said 
   above, in the First steps section, .8 point
+
+_Emanuel Muises_
+
+## Week 07
+
+- This week we start consuming data and responses from the api proposed by radium, for this week's problem 
+
+- The problem was to send data to the api and obtain a satisfactory or wrong response and display it through an alert
+
+- You will find the link in point 9 of "first steps" to view this week's problem
 
 _Emanuel Muises_
