@@ -1,4 +1,16 @@
 window.onload = function () {
+    var name = localStorage.getItem('name');
+    var lname = localStorage.getItem('lastName');
+    var dni = localStorage.getItem('dni');
+    var dob = localStorage.getItem('dob');
+    var phone = localStorage.getItem('phone');
+    var address = localStorage.getItem('address');
+    var city = localStorage.getItem('city');
+    var zip = localStorage.getItem('zip');
+    var email = localStorage.getItem('email');
+    var password = localStorage.getItem('password');
+
+    
     // Name
     var firstNameInput = document.getElementById('first-name');
     var nameError = document.getElementById('name-error-paragraph'); 
@@ -388,7 +400,6 @@ window.onload = function () {
                             return response.json();
                         })
                         .then(function(data){
-                            console.log(data);
                             if(data.success) {
                                 alert(data.msg + '\n' 
                                 + 'Your name is: ' + firstNameInput.value + '\n' 
@@ -402,6 +413,16 @@ window.onload = function () {
                                 + 'Your email is: ' + emailInput.value + '\n'
                                 + 'Your password is: ' + passwordInput.value + '\n'
                                 );
+                                localStorage.setItem('name', firstNameInput.value);
+                                localStorage.setItem('lastName', lastNameInput.value);
+                                localStorage.setItem('dni', dniNumberInput.value);
+                                localStorage.setItem('dob', dateBornInput.value);
+                                localStorage.setItem('phone', cellphoneNumberInput.value);
+                                localStorage.setItem('address', directionInput.value);
+                                localStorage.setItem('city', locationInput.value);
+                                localStorage.setItem('zip', cpInput.value);
+                                localStorage.setItem('email', emailInput.value);
+                                localStorage.setItem('password', passwordInput.value);
                             } else {
                                 console.log(data.errors);
                                 allErrors = [];
@@ -417,4 +438,16 @@ window.onload = function () {
                 }
         };
     };
+
+    firstNameInput.value = name;
+    lastNameInput.value = lname;
+    dniNumberInput.value = dni;
+    dateBornInput.value = dob;
+    cellphoneNumberInput.value = phone;
+    directionInput.value = address;
+    locationInput.value = city;
+    cpInput.value = zip;
+    emailInput.value = email;
+    passwordInput.value = password;
+
 };
